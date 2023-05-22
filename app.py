@@ -45,19 +45,19 @@ if __name__ == '__main__':
                  ('YES (if FastingBS > 120 mg/dl)', 'NO (if FastingBS < 120 mg/dl)')
                 )
 
-    restecg=st.radio("RESTING ELECTROCARDIOGRAM RESULT(SELECT NORMAL IF YOU DON'T KNOW EXACT CONDITION)",
+    restecg=st.radio("RESTING ELECTROCARDIOGRAM RESULT(SELECT NORMAL IF YOU DON'T KNOW THE EXACT CONDITION)",
                     ('NORMAL','ST-T ABNORMALITY','LEFT VENTRICULAR HYPERTROPHY')
                     )
 
     thalach=st.number_input("ENTER YOUR HIGHEST HEART RATE IN LAST 5 MIN",min_value=0, max_value=9999, value=0,step =1)
 
-    exang=st.radio("DO YOU HAVE CHEST PAIN DURING EXERCISE?",
+    exang=st.radio("DO YOU HAVE CHEST PAIN DURING PHYSICAL ACTIVITIES?",
                 ('YES','NO')
                 )
 
     oldpeak=st.number_input("NUMERIC VALUE MEASURED IN ST DEPRESSION (NORMAL VALUE IS < 0.5)",min_value=0.0, max_value=9999.0, value=0.0,step =0.1,format="%.1f")
 
-    slope=st.radio("THE SLOPE OF THE PEAK EXERCISE ST SEGMENT (SELECT NORMAL IF YOU DON'T KNOW EXACT CONDITION)",
+    slope=st.radio("THE SLOPE OF THE PEAK EXERCISE ST SEGMENT (SELECT NORMAL IF YOU DON'T KNOW THE EXACT CONDITION)",
                    ('UPSLOPING (NORMAL CONDITION)','FLAT (SLIGHT ABNORMALITY)','DOWNSLOPING (SEVERE ABNORMALITY)')
                 )
 

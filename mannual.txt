@@ -1,0 +1,15 @@
+ 
+ streamlit run stream.py
+ 
+ 
+ tbc= to be computed
+ 
+ 
+ age	sex(radio)	cp(radio)	trestbps	chol(tbc)	fbs(radio)	restecg(to be computed)	thalach(bpm)	exang(radio)	oldpeak(tbc)	slope(tbc)	target
+
+ Exercise-induced angina is a type of chest pain that comes on with exercise, stress, or other
+  things that make the heart work harder.
+ It is a symptom of coronary artery disease,
+ which is caused by cholesterol-clogged coronary arteries1.
+ Angina is generally caused from not getting enough blood through the arteries
+ to supply the walls of the heart with enough blood flow to adequately pump2.

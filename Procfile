@@ -1,1 +1,1 @@
-sh setup.sh && python3 data_base.py && python3 table.py && streamlit run app.py
+web: sh setup.sh && streamlit run app.py

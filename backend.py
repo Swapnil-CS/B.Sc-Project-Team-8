@@ -49,12 +49,6 @@ class prediction:
         cs2=self.cs_svm(input)
         cs3=self.cs_nn(input)
         pred = sugeno([0.5505245,0.09024978,0.0004187],cs1,cs2,cs3)
-        f = open("user_records.txt", "a")
-        f.write(str(input))
-        f.write(": ")
-        f.write(str(pred))
-        f.write("\n")
-        f.close()
         return pred
         
 

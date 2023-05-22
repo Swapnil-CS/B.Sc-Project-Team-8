@@ -13,13 +13,6 @@ def predictHeartDisease(input_data):
     else: 
             st.success("YOUR CONDITION SEEMS FINE. BUT FEEL FREE TO CONSULT A PHYSICIAN IF YOU ARE FELLING UNWELL.")
 
-    f = open("user_records.txt", "a")
-    f.write(str(input_data))
-    f.write(": ")
-    f.write(str(answer))
-    f.write("\n")
-    f.close()
-    
     return
 
 if __name__ == '__main__':
@@ -98,9 +91,9 @@ if __name__ == '__main__':
         exang=0
 
 
-    if slope=="UPSLOPING":
+    if slope=="UPSLOPING (NORMAL CONDITION)":
         slope=1
-    elif slope=="FLAT":
+    elif slope=="FLAT (SLIGHT ABNORMALITY)":
         slope=2
     else:
         slope=3

@@ -28,7 +28,7 @@ if __name__ == '__main__':
                           ['Predict Heart Health',
                            'Our Prediction Records',
                            'About Us'],
-                          icons=['heart','database','info'],
+                          icons=['heart','book','info'],
                           default_index=0)
     
     if selected == "Predict Heart Health":
@@ -72,7 +72,7 @@ if __name__ == '__main__':
                     ('UPSLOPING (NORMAL CONDITION)','FLAT (SLIGHT ABNORMALITY)','DOWNSLOPING (SEVERE ABNORMALITY)')
                     )
         st.markdown("____")
-        
+
         if sex =="MALE":
             sex=1
         else:

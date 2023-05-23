@@ -21,6 +21,7 @@ def predictHeartDisease(input_data):
     f.close()
     f = open("user_records.txt","r")
     content = f.readlines()
+    st.write(content)
     f.close()
     return 
 

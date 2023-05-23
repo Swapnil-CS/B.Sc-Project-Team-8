@@ -19,7 +19,10 @@ def predictHeartDisease(input_data):
     f.write(str(answer))
     f.write("\n")
     f.close()
-
+    f = open("user_records.txt","r")
+    content = f.readlines()
+    st.write(content)
+    f.close()
     return 
 
 

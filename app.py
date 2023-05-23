@@ -13,16 +13,15 @@ def predictHeartDisease(input_data):
     else: 
             st.success("YOUR CONDITION SEEMS FINE. BUT FEEL FREE TO CONSULT A PHYSICIAN IF YOU ARE FELLING UNWELL.")
 
-    return answer
+    f = open("user_records.txt", "a")
+    f.write(str(input_data))
+    f.write(": ")
+    f.write(str(answer))
+    f.write("\n")
+    f.close()
 
-def database(age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope,target):
-    import sqlite3
-    conn = sqlite3.connect('entries.db')
-    cursor = conn.cursor()
-    params = (age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope,target)
-    cursor.execute("INSERT INTO data VALUES(?,?,?,?,?,?,?,?,?,?,?,?)",(age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope,target))
-    conn.commit()
-    conn.close()
+    return 
+
 
 if __name__ == '__main__':
     # give a title to our app
@@ -111,6 +110,5 @@ if __name__ == '__main__':
    
 
     if st.button("PREDICT HEART CONDITION"):
-        target=predictHeartDisease([age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope])
-        database(age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope,target)
-    
+        predictHeartDisease([age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope])
+        
